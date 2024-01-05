@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* font-family: 'Black Han Sans' */
+@font-face {
+    font-family: 'OG_Renaissance_Secret-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/OG_Renaissance_Secret-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-link {
+    font-family: 'Gowun Dodum', sans-serif;
+}
+.font-import {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.noonnu {
+    font-family: 'OG_Renaissance_Secret-Rg', sans-serif;
+}
+
+.sentences {
+    font-weight: 700;
+    font-size: 16px;
+    /* font-size: 1rem;
+    font-size: 1em; */
+    
+    /* text-align */
+    text-align: center;
+    text-align: left;
+    text-align: right;
+
+    /* text-decoration */
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline;
+
+    /* line-height */
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    /* 색깔 지정방법 */
+    /*
+    1. 색깔 이름 작성 ex. red, black etc
+    2.  rgb(-,-,-) -에는 0~255까지의 숫자 가능
+    3. #-- -- -- 여섯자리 숫자 16진수로 이루어진 수 (0~9, a,b,c,d,e,f로 이루어진 수)
+     */
+}

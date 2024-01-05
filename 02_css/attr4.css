@@ -1,0 +1,86 @@
+body {
+    height: 2000px;
+}
+
+.box {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+.background {
+    background: aliceblue;
+    /* background 단축속성
+        - color image repeat position/size 순서!
+    */
+    background: linear-gradient(90deg, black,white, pink);
+    background: linear-gradient(to top, black,white, pink);
+    background: linear-gradient(to bottom, black,white, pink);
+
+
+}
+
+.background-image {
+    background-image: url(./img/small_img.png);
+
+    /* background- repeat 속성 */
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+
+    /* background position 
+        center bottom left right top 의 키워드로 지정가능
+    */
+    /* background-position: center;
+    background-position: center top;
+    background-position: 100px 200px;
+    background-position: 100px; */
+
+    /* background size 
+    한개의 px값을 쓰면 가로값을 변경, 세로는 원본비율로 알아서 유지됨
+
+    cotain, cover는 원본비율이 유지된다!
+    */
+    /* background-size: 50px;
+    background-size: 90px 50px; */
+    /* background-size: contain; */
+    background-size: cover;
+    /* background-size: auto; */
+
+    /* background attachment */
+    background-attachment: fixed;
+    background-color: pink;
+}
+
+.lion1 {
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);
+    background-color: skyblue;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.lion2 {
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);
+    background-color: skyblue;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: 100px 30px;
+    background-size: contain;
+
+
+}
+.lion3 {
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);
+    background-color: skyblue;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: 80px 100px;
+    background-size: cover;
+}

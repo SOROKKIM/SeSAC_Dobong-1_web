@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(white, orange);
+    height: 2000px;
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid gray;
+    line-height: 100px;
+}
+/* position - static
+    -기본값, 작성하지 않아도 됨
+    -top, bottom, left, right 속성 적용 안됨
+*/
+.position-static {
+    background-color: pink;
+    position: static;
+    top: 50px;
+}
+
+/* relative 
+    - 일반적인 문서 흐름에 따라서 배치가 됨 (자기 자리 보존)
+    -자기 자신을 기준으로 배치
+*/
+.position-relative {
+    background-color: aquamarine;
+    position: relative;
+    left: 100px;
+    /* right: 50px; */
+    /* top: 100px; */
+}
+
+/* absolute 
+    -static 이 아닌 값을 갖는 제일 가까운 조상 기준
+    - 문서 흐름을 벗어남(자기 자리가 없어짐)
+*/
+.position-absolute {
+    position: absolute;
+    background-color: gold;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+}
+
+/* fixed
+    -viewport기준으로 특정위치에 위치
+    -스크롤 되어도 움직이지 않는다 -> header 제작시 많이 이용
+*/
+
+.position-fixed {
+    position: fixed;
+    background-color: coral;
+    top: 0;
+
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.item1 {
+    position: relative;
+    background-color: yellow;
+    left: 50px;
+    top: 30px;
+}
+.item2 {
+    position: absolute;
+    background-color: pink;
+    right: 30px;
+    bottom: 100px;
+}
+.item3 {
+    background-color: green;
+    position: fixed;
+    right: 100px;
+    top: 100px;
+}
+.container div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+}
+.container div:nth-child(1) {
+    background-color: salmon;
+    z-index: 2;
+}
+.container div:nth-child(2) {
+    background-color: burlywood;
+    left: 30px;
+    top: 30px;
+    
+    
+}
+.container div:nth-child(3) {
+    background-color: olivedrab;
+    left: 60px;
+    top: 60px;
+    z-index: 1;
+}

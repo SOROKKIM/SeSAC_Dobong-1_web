@@ -120,3 +120,54 @@ let introduce = {
     age:26
 }
 console.log(introduce)
+
+// 자동형변환 (prompt의 입력값은 항상 string)
+// let mathScore = prompt("수학 점수를 입력 하세요"); 
+// let engScore = prompt("영어 점수를 입력 하세요");
+// mathScore = Number(mathScore)
+// engScore = Number(engScore)
+// let avg = (mathScore + engScore) / 2;
+// console.log(avg);
+
+
+//typeof 로 데이터 타입 확인 가능
+console.log(typeof "abcd")
+console.log(typeof true)
+console.log(typeof [])
+console.log(typeof {})
+console.log(typeof NaN)
+console.log(typeof null)
+console.log(typeof undefined)
+
+// 형변환
+// 1. ? >> string
+console.log("==========================")
+let str1 = true // boolean
+let str2 = 123 // number
+let str3 = null // null
+
+console.log(String(str1))
+console.log(String(str2))
+console.log(String(str3))
+
+console.log(typeof String(str1))
+console.log(typeof String(str2))
+console.log(typeof String(str3))
+
+// 2. ? >> number
+let n1 = true;
+let n2 = false;
+let n3 = 123;
+let n4 = "123.9";
+
+console.log(Number(n1))
+console.log(Number(n2))
+console.log(Number(n3))
+console.log(typeof Number(n4))
+console.log(parseInt(n4)) //소수점은 버리고 정수형으로 변경
+
+//실습
+
+console.log(typeof 10 +" isn`t " + typeof "a" + " data type.")
+
+

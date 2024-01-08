@@ -102,3 +102,5 @@ const str2 = "서울"
 console.log(str1+"는 " +str2+"에 삽니다.")
 console.log(str1,"는 " ,str2,"에 삽니다.")
 console.log(`${str1}는 ${str2}에 삽니다.`)
+
+

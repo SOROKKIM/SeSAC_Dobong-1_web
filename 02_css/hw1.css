@@ -1,0 +1,53 @@
+.container {
+    width: 2000px;
+    height: 1000px;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+img {
+    width: 500px;
+    height: 300px;
+    transform: skewY(30deg);
+
+}
+.beach1 {
+    z-index: 2;
+    position: absolute;
+    left: 20%;
+    top: 33%;
+}
+.beach2 {
+    z-index: 1;
+    position: absolute;
+    left: 40%;
+    top: 33%;
+}
+.beach3 {
+    z-index: 0;
+    position: absolute;
+    left: 60%;
+    top: 33%;
+}
+
+.beach1:hover{
+    transform: skewY(-30deg);
+    transition: transform 1s;
+    z-index: 2;
+
+}
+.beach2:hover {
+    transform: skewY(-30deg);
+    transition: transform 1s;
+    z-index: 2;
+
+}
+.beach3:hover {
+    transform: skewY(-30deg);
+    transition: transform 1s;
+    z-index: 2;
+
+}

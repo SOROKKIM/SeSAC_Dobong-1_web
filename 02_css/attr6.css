@@ -54,3 +54,36 @@
     backface-visibility: visible;
 
 }
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: bisque;
+}
+
+.box1:hover{
+    background-color: pink;
+    width: 120px;
+    height: 120px;
+
+    transition-duration: 1s;
+    transition-delay: 1s;
+    /* transition-property: height; */
+    transition-timing-function: linear; /*linear는 등속! 일정한 속도로 변경*/
+}
+.box2:hover{
+    /* transition의 단축 속성 */
+    /* transition: property duration(필수) fuction delay */
+    background-color: aqua;
+    transform: translateX(100px) scaleX(2);
+
+    transition: transform 0.5s linear 2s;
+    transition: all 2s ease 0.5s; /*처음 숫자는 duration 두번째 숫자는 delay*/
+}
+.box3:hover{
+    transition: .6s;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    display: none;
+}

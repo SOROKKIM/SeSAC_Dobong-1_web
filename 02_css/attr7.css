@@ -1,0 +1,110 @@
+/* 
+    transition VS animation
+    -transition
+        -전환될 스타일을 지정할 수 있음
+        -hover나 onclick 같은 "이벤트"에 의해 발생
+    -animation
+        -중간 스텝을 지정해 보다 세밀한스타일 전환 가능
+        -시작, 반복, 정지 동작 가능
+        -@keyframes 로 이루어짐
+
+*/
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+    animation-name: boa-ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; /*애니메이션 동작 횟수 - 무한도 가능*/
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+/* 
+    animation property
+        -animation-name: @keyframes로 만들어준 애니메이션 이름 지정(필수!)
+        -animation-duration: 한 사이클의 애니메이션이 얼마에 걸쳐 일어날지 초단위로 지정(단위: s) (필수!)
+        -animation-delay: 요소가 로드된 후 언제 애니메이션이 시작될지 지정 (단위: s)
+        -animation-iteration-count: 애니메이션 반복 횟수(default: 1)
+        -animation-timing-fuction: 어떤 시간간격으로 애니메이션을 진행할지 설정
+            -ease(default) linear ease-in ease-out ease-in-out
+        -animaiton-direction:애니메이션이 반복될 때 진행 방향 지정
+            -normal reverse alternate alternate-reverse
+
+*/
+
+@keyframes boa-ani{
+    0%{
+        left: 0px;
+    }
+    25% {
+        left: 200px;
+    }
+    50% {
+        left: 400px;
+    }
+    75% {
+        left: 200px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+.ball1 {
+    position: relative;
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: purple;
+    animation-name: bounce1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate; /*애니메이션의 자연스러운 동작 구현 가능*/
+
+    /* animation: bounce1 1s ease-out 0s infinite alternate; <- 단축속성으로 작성 가능*/
+
+}
+
+@keyframes bounce1 {
+    from{
+        top: 300px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+.ball2 {
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: bounce2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    /* animation: bounce2 2s infinite ; */
+
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        bottom: 0;
+        width: 55px;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        bottom: 300px;
+        background-color: tomato;
+        animation-timing-function: ease-in;
+    }
+}

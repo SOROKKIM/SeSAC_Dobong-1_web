@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 실습1</title>
+</head>
+<body>
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+
+    <script>
+        let text = document.querySelector('span')
+        text.innerHTML = "<strong>맛없다 --;;</strong>"
+        text.style = 'color : red'
+    </script>
+</body>
+</html>

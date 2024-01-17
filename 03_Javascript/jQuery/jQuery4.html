@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <title>jQuery - 이벤트리스너</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text">
+        <button>버튼</button>
+    </div>
+
+    <script>
+        //ready : 돔 트리 생성 완료된 후에 실행
+        $(document).ready(function() {
+            $('.container').append('<h2>안녕 ready</h2>')
+        })
+
+        $(function() {
+            $('.container').append('<h2>안녕 ready2</h2>')
+        })
+
+        //click 
+        $('button').click(function() {
+            alert('클릭!')
+        })
+        //click과 동일 코드
+        $('button').on('click',function() {
+            alert('클릭!2')
+        })
+
+        //mouseover
+        $('button').mouseover(function() {
+            alert('마우스 오버')
+        })
+
+        //keydown
+        $('input').keydown(function(e) {
+            console.log('e : ', e);
+            console.log('e.target : ', e.target);
+            console.log('e.key : ', e.key);
+            if(e.key == 'Enter') alert('enter 입력!')
+
+            console.log('this : ', this);
+        })
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩- 실습 웹페이지 만들기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: azure;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+           z-index: 100;
+           height: 100px;
+           width: 100%;
+           background-color: azure;
+        }
+        h1 {
+            color:skyblue;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                color: gray;
+            }
+            h1 .bi-suit-heart-fill {
+                display: none;
+            }
+
+            h1 .fa-umbrella-beach {
+             display: inline;
+            }
+        }
+        @media screen and (min-width: 401px) {
+            
+            h1 .bi-suit-heart-fill {
+                display: inline;
+            }
+
+            h1 .fa-umbrella-beach {
+                display: none;
+            }
+        }
+
+        
+    </style>
+    <script>
+        function submitForm() {
+    
+            swal("가입 성공!", "바사모에 가입하신걸 환영합니다.", "success");
+            
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="bi bi-suit-heart-fill"></i><i class="fa-solid fa-umbrella-beach"></i> 바다를 사랑하는 모임 <i class="fa-solid fa-umbrella-beach"></i><i class="bi bi-suit-heart-fill"></i></h1>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/02_css/img/beach1.jpg" class="d-block w-100 h-100 " alt="beach">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>동해</h5>
+              <p>동해는 대한민국, 북한, 러시아, 일본에 둘러싸여 있는 바다이다.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/02_css/img/beach2.jpg" class="d-block w-100 h-100" alt="beach">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>서해</h5>
+              <p>서해는 한반도와 중국 대륙에 삼면이 둘러싸여 있는 바다이다.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/02_css/img/beach3.jpg" class="d-block w-100 h-100" alt="beach">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>남해</h5>
+              <p>한국 남쪽에 있는 바다.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Beach #1 - 동해
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>동해는 유라시아 판으로부터 일본이 분리되면서 열리게 된 해양지각으로 신생대 고제3기 올리고세부터 신제3기 마이오세 중반에 형성되었다.</strong> 
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Beach #2 - 서해
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>서해는 중생대 말기부터 군산분지 등 대륙지각의 리프팅(rifting)이 활발하게 발생하여 형성된 바다이며 한반도에 비해 훨씬 발달된 퇴적분지로 구성되어 있으므로 지진활동은 한반도보다 더 활발할 것으로 해석된다.</strong> 
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Beach #3 - 남해
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>남해는 대한민국에서 한반도의 남쪽에 있는 바다를 지칭하는 말로, 일반적으로는 서쪽으로 전라남도 진도부터 동쪽으로 부산광역시 해운대구까지 사이의 바다를 가리킨다. 국제적으로 이 해역의 대부분(전라남도 해남군 남쪽 끝 ~ 부산광역시)은 동해에 속하고, 나머지는 서해에 속한다.</strong> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <h3><i class="bi bi-feather"></i> 모임 가입하기</h3>
+      <br>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">가입 계기</label>
+      </div>
+      <br>
+      <button type="button" class="btn btn-outline-secondary" onclick="submitForm()">가입 완료</button>
+      <br>
+      
+</div>
+
+</body>
+</html>

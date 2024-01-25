@@ -15,7 +15,7 @@ app.get("/", (requset, response) => {
   // render의 두번째 인자에서 index.ejs에서 사용할 정보 전달
   response.render("index.ejs", {
     btns: ["apple", "banana"],
-    isLogin: false,
+    isLogin: true,
     userInfo: {
       name: "boa",
       msg: "점심 먹었나요?",

@@ -25,6 +25,7 @@ app.post("/postForm", function (req, res) {
   // post 요청은 request.body에 담겨져 옵니다!
   console.log(req.body);
   //   res.send("포스트 요청 성공!~~"); send와 render는 같이 쓰지 못한다
+  console.log("안녕하세요");
   res.render("result", {
     title: "POST",
     userInfo: req.body, //{id2: , pw2:'', agree: [] }의 형태

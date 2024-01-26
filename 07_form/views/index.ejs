@@ -15,7 +15,7 @@
       <br />
       <label>
         email:
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
       </label>
       <br />
       <label>
@@ -31,7 +31,15 @@
     <h2>POST 요청</h2>
     <form action="/postForm" method="post">
       <label for="id">ID</label>
-      <input type="text" id="id" name="id" placeholder="id를 입력해주세요." />
+      <input
+        type="text"
+        id="id"
+        name="id"
+        pattern="^([a-zA-Z0-9가-힣]){4,10}$"
+        title="아이디는 영어 대소문자, 한글, 숫자로 이루어진 4글자 이상 10자 이하 입니다."
+        placeholder="id를 입력해주세요."
+        required
+      />
       <br />
 
       <label for="pw">비밀번호</label>
@@ -39,7 +47,10 @@
         type="password"
         id="pw"
         name="pw"
+        pattern="^([a-z0-9]){8,12}$"
+        title="소문자, 숫자로 8자리 이상 12자리 이하"
         placeholder="비밀번호를 입력해주세요."
+        required
       />
 
       <fieldset>

@@ -10,6 +10,13 @@
     userInfo: req.query, //{id:'',email:'',pw:''}
     }
      -->
+
+    <style>
+      span {
+        /* color: coral; */
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
     <h1><%= title%>요청 확인하기</h1>
@@ -20,10 +27,23 @@
       >이군요!!
     </div>
     <div>관심사는 <span><%=userInfo.like%></span>이군요!!</div>
-    <div>좋아하는 색상은 <span><%=userInfo.color%></span>군요!!</div>
-    <div>좋아하는 숫자는 <span><%=userInfo.number%></span>이군요!!</div>
 
+    <% if(addInfo) { %>
+    <hr />
+    <h4>다른 태그 작성해보기</h4>
+    <div>
+      좋아하는 색상은 <span class="color"><%=userInfo.color%></span>군요!!
+    </div>
+    <div>좋아하는 숫자는 <span><%=userInfo.number%></span>이군요!!</div>
+    <% } %>
     <a href="/"> 홈으로 이동하기</a>
     <%# ejs 주석 처리 방법 %>
+
+    <script>
+      document.addEventListener("DOMContentedLoaded", () => {
+        const color = document.querySelector(".color");
+        color.style.color = "<%= userInfo.color%>";
+      }); //DOMContentedLoaded 돔 트리 불러오는상태 이 부분은 사용할일 없음 참고만 하기!
+    </script>
   </body>
 </html>

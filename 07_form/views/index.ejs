@@ -73,5 +73,49 @@
 
       <input type="submit" value="제출" />
     </form>
+
+    <h2>validation</h2>
+    <form
+      action="/js-form-check"
+      method="post"
+      name="validationForm"
+      target="_blank"
+      onsubmit="return checkForm(this)"
+    >
+      <input
+        type="text"
+        name="id"
+        minlength="1"
+        placeholder="ID를 입력해주세요."
+        title="최소 한글자 이상을 입력해주세요."
+        id="input"
+      />
+
+      <br />
+      <div>우편물 수령 장소</div>
+      <label> <input type="checkbox" name="mail" value="회사" /> 회사 </label>
+      <label> <input type="checkbox" name="mail" value="자택" /> 자택 </label>
+
+      <button>제출</button>
+    </form>
+    <script>
+      function checkForm(form) {
+        console.log(form);
+        // const form = document.forms('validationForm') //name 속성으로 form 출력
+        console.log(form.input); //id값
+        console.log(form.id); //name 값
+
+        /* input text 창에 아무것도 쓰지 않았다면*/
+        if (form.id.value === "") {
+          alert("id를 입력해주세요");
+          return false; //submit이벤트를 실행하지 않도록! 서버로 데이터를 보내지 못하도록!
+        }
+        /* checkbox에서 아무것도 선택하지 않았다면*/
+        if (form.mail[0].checked === false && form.mail[1].checked === false) {
+          alert("우편물 수령장소를 선택해주세요.");
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>

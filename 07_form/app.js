@@ -23,6 +23,7 @@ app.get("/", function (req, res) {
 //   res.render("result", {
 //     title: "GET",
 //     userInfo: req.query,
+//     addInfo: false,
 //   });
 // });
 
@@ -38,6 +39,7 @@ app.get("/", function (req, res) {
 //   res.render("result", {
 //     title: "POST",
 //     userInfo: req.body,
+//     addInfo: true,
 //   });
 // });
 
@@ -59,6 +61,11 @@ app.post("/postForm", function (req, res) {
     title: "POST",
     userInfo: req.body, //{id2: , pw2:'', agree: [] }의 형태
   });
+});
+
+app.post("/js-form-check", (req, res) => {
+  console.log(req.body);
+  res.send("validation 응답");
 });
 
 app.listen(PORT, function () {

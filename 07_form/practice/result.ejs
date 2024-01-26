@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 - 폼 전송 결과</title>
+    <!-- 
+    {
+    title: "GET",
+    userInfo: req.query, //{id:'',email:'',pw:''}
+    }
+     -->
+  </head>
+  <body>
+    <h1><%= title%>요청 확인하기</h1>
+    <div><span><%=userInfo.name%>(<%=userInfo.sex%>)</span>님 환영합니다!</div>
+    <div>
+      생년월일은
+      <span><%=userInfo.year%>년<%=userInfo.month%>월<%=userInfo.day%>일</span
+      >이군요!!
+    </div>
+    <div>관심사는 <span><%=userInfo.like%></span>이군요!!</div>
+    <div>좋아하는 색상은 <span><%=userInfo.color%></span>군요!!</div>
+    <div>좋아하는 숫자는 <span><%=userInfo.number%></span>이군요!!</div>
+
+    <a href="/"> 홈으로 이동하기</a>
+    <%# ejs 주석 처리 방법 %>
+  </body>
+</html>

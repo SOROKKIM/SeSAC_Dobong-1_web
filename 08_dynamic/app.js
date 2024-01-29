@@ -50,6 +50,11 @@ app.post("/fetch", (req, res) => {
   res.send(req.body);
 });
 
+//open api 사용
+app.get("/open-api", (req, res) => {
+  res.render("api");
+});
+
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });

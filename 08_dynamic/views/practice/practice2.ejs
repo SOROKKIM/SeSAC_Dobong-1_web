@@ -39,6 +39,14 @@
           pw: form.pw.value,
         };
 
+        //유효성검증
+        if (!form.id.checkValidity() || !form.pw.checkValidity()) {
+          resultBox.textContent = "id 와 pw는 필수값입니다.";
+          resultBox.style.color = "green";
+
+          return;
+        }
+
         try {
           const response = await axios({
             method: "post",

@@ -61,6 +61,11 @@ app.get("/practice1", (req, res) => {
   res.render("practice/practice1.ejs");
 });
 
+app.get("/axios-practice1", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
+
 //실습2
 app.get("/practice2", (req, res) => {
   res.render("practice/practice2.ejs");

@@ -68,6 +68,14 @@
       const resultBox = document.querySelector(".result");
 
       async function axiosGet() {
+        //like 새로운 배열로 만들어서 해보기 => 리더님 실습 해답
+        // const likes = []
+        // form.like.array.forEach(checkbox => {
+        //   if (checkbox.checked) {
+        //     likes.push(checkbox.value)
+        //   }
+
+        // });
         const form = document.forms["register"];
         const data = {
           name: form.name.value,
@@ -78,12 +86,13 @@
           like: Array.from(form.querySelectorAll('[name="like"]:checked')).map(
             (input) => input.value
           ),
+          // likes: form.like.value,
         };
         try {
           const response = await axios({
             method: "GET",
-            url: `/axios?name=${data.name}&gender=${data.gender}&birthYear=${data.birthYear}&birthMonth=${data.birthMonth}&birthDay=${data.birthDay}&like=${data.like}`,
-            // params: data, //get일때는 params로 데이터 전달
+            url: "/axios-practice1",
+            params: data, //get일때는 params로 데이터 전달
           });
           console.log(response.data);
           const { name, gender, birthYear, birthMonth, birthDay, like } =

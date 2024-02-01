@@ -118,7 +118,7 @@
           console.log(res.data.path); //업로드된 이미지 정보
 
           //img 태그에 업로드한 사진 올리기
-          img.src = res.data.path;
+          img.src = "/" + res.data.path;
         });
       }
       function fileAndTextUpload() {
@@ -144,7 +144,7 @@
             console.log(res.data.title);
             console.log(res.data.fileInfo);
             console.log(res.data.fileInfo.path);
-            img.src = res.data.fileInfo.path;
+            img.src = "/" + res.data.fileInfo.path;
             resultTitle.innerText = res.data.title.dynamicTitle;
           })
           .catch((err) => console.log(err));

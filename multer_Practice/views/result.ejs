@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="../public/img/css/resultcss.css"
-      type="text/css"
-    />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/static/css/resultcss.css" type="text/css" />
   </head>
   <body>
+    <!-- 
+  {
+    src: req.file.path,
+    userInfo: {
+        name:'진형',
+        ...
+    },
+  }
+     -->
     <h1><span><%= name %></span>님 마이페이지</h1>
     <img
       src="<%= profileImagePath %>"

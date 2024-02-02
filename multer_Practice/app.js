@@ -59,6 +59,10 @@ app.post("/uploads", uploadDetail.single("profile"), (req, res) => {
     id: req.body.id,
     pw: req.body.pw,
     age: req.body.age,
+
+    // 리더님 실습 풀이
+    // src: req.file.path,
+    // userInfo: req.body,
   });
 });
 

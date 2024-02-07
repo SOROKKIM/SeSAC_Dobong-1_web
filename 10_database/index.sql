@@ -227,3 +227,82 @@ delete from user where id='jungkrat';
 select * from user;
 
 --  select > from > where > group by > having > order by > limit 
+
+
+-- group by & having
+show DATABASES;
+use sesac;
+show tables;
+desc user;
+DROP TABLE IF EXISTS user; --user 테이블이 존재할 경우 삭제
+CREATE TABLE user (
+    user_id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(10) NOT NULL,
+    specialize ENUM('축구', '야구', '클라이밍', '배드민턴') NOT NULL,
+    gender ENUM('남', '여') NOT NULL,
+    career_year int NOT NULL
+);
+DESC user;
+
+INSERT into user VALUES(NULL, '김판곤', '축구', '남', 40);
+INSERT INTO user VALUES(NULL, '손흥민', '축구', '남',15);
+INSERT INTO user VALUES(NULL, '김자인', '클라이밍', '여',10);
+INSERT INTO user VALUES(NULL, '김동우', '축구', '남',1);
+INSERT INTO user VALUES(NULL, '전유진', '배드민턴', '여',2);
+INSERT INTO user VALUES(NULL, '이대호', '야구', '남',24);
+INSERT INTO user VALUES(NULL, '안세영', '배드민턴', '여',11);
+INSERT INTO user VALUES(NULL, '배서연', '클라이밍', '여',3);
+INSERT INTO user VALUES(NULL, '황희찬', '축구', '남',9);
+INSERT INTO user VALUES(NULL, '지소연', '축구', '여',17);
+INSERT INTO user VALUES(NULL, '이정후', '야구', '남',11);
+INSERT INTO user VALUES(NULL, '김광현', '야구', '남',21);
+
+select * from user;
+
+-- 집계 함수
+select COUNT(specialize) 
+FROM user 
+WHERE specialize='축구';
+-- where 조건에 만족하는 튜플의 개수를 세어줌
+
+select sum(career_year)
+from user;
+select sum(career_year)
+from user
+WHERE specialize='축구';
+-- where 조건에 만족하는 튜플의 합
+
+select AVG(career_year)
+from `user`
+WHERE specialize='축구';
+
+select MIN(career_year)
+from `user`
+WHERE specialize='축구';
+
+select MAX(career_year)
+from `user`
+WHERE specialize='축구';
+
+-- group by (같은 그룹끼리 묶어서 확인 가능)
+select specialize
+from `user`
+GROUP BY specialize;
+
+select specialize, count(*)
+from `user`
+GROUP BY specialize;
+
+-- having
+select specialize, count(*)
+from `user`
+where gender='여' 
+GROUP BY specialize
+having count(specialize) >=2; --그룹바이로 묶어준 애들의 조건이 들어가야함
+-- where 조건에 집계함수 사용불가
+-- 각 분야에 여성들 숫자 세기
+-- having: 여성 중 2명 이상의 분야만 출력
+
+/*
+  select > from > where > group by > having > order by > limit 
+*/

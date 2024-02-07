@@ -25,7 +25,7 @@
       <br />
 
       <button type="button" onclick="Post()">로그인</button>
-      <button type="button" onclick="">로그인</button>
+      <button type="button" onclick="Login()">로그인</button>
       <br />
       <br />
       <!-- 동적폼 전송 결과를 보여줄 곳 -->
@@ -53,7 +53,41 @@
         try {
           const response = await axios({
             method: "post",
-            url: "/",
+            url: "/login",
+            data: data,
+          });
+          console.log(response.data);
+          if (response.data.success) {
+            resultBox.style.color = "blue";
+            resultBox.innerText = `${response.data.message}`;
+          } else {
+            resultBox.style.color = "red";
+            resultBox.innerText = `${response.data.message}`;
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
+
+      async function Login() {
+        const form = document.forms["login"];
+        const data = {
+          id: form.id.value,
+          pw: form.pw.value,
+        };
+
+        //유효성검증
+        if (!form.id.checkValidity() || !form.pw.checkValidity()) {
+          resultBox.textContent = "id 와 pw는 필수값입니다.";
+          resultBox.style.color = "green";
+
+          return;
+        }
+
+        try {
+          const response = await axios({
+            method: "post",
+            url: "/signin",
             data: data,
           });
           console.log(response.data);

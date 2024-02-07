@@ -62,8 +62,8 @@ where c.id = o.customer_id;
 
 
 -- natural JOIN : 자동으로 찾아서 조인
-SELECT *
-FROM orderlist NATURAL JOIN customer;
+-- SELECT *
+-- FROM orderlist NATURAL JOIN customer;
 
 
 

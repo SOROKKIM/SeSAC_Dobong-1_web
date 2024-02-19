@@ -16,6 +16,7 @@ INSERT INTO visitor VALUES (NULL, '홍길동', '동번쩍서번쩍~');
 
 select * from visitor;
 
+select * from user;
 
 ##############[DCL]#################
 ##새로운 유저 생성

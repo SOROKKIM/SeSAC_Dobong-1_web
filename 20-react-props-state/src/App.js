@@ -10,6 +10,8 @@ import FunctionStatePrac from "./components/FunctionStatePrac";
 import PororoObj from "./components/PororoObj";
 import PropsMap from "./components/PropsMap";
 import Alphabet from "./components/Alphabet";
+import PracticeMap from "./components/PracticeMapFilter/PracticeMap";
+import PracticeMapSearch from "./components/PracticeMapFilter/PracticeMapSearch";
 
 // valid 함수 정의
 function valid() {
@@ -55,9 +57,13 @@ function App() {
       <FunctionStatePrac></FunctionStatePrac>
       <h1>Function Props, State Practice</h1>
       <PororoObj></PororoObj> */}
-      <h1>map과 filter 사용</h1>
+      {/* <h1>map과 filter 사용</h1> */}
       {/* <PropsMap arr={dataArr} /> */}
-      <Alphabet />
+      {/* <Alphabet /> */}
+      <h1>map과 filter 실습</h1>
+      {/* <PracticeMap />
+      <PracticeMapSearch /> */}
+      <PracticeMapSearch />
     </div>
   );
 }

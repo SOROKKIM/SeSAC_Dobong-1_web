@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import EntirePractice from "./practice/EntirePractice";
 import HandleEx from "./practice/HandlerEx";
 import HandleEx2 from "./practice/HandlerEx2";
 import HandleEx3 from "./practice/HandlerEx3";
@@ -17,8 +18,10 @@ function App() {
       <HandleEx2></HandleEx2>
       <h1>합성 이벤트 실습3</h1>
       <HandleEx3></HandleEx3> */}
-      <h1>종합 실습 Props, State, Event</h1>
-      <HandleEx4></HandleEx4>
+      {/* <h1>종합 실습 Props, State, Event</h1>
+      <HandleEx4></HandleEx4> */}
+      <h1>종합 실습 Props, State, Event 리더님 해답</h1>
+      <EntirePractice />
     </div>
   );
 }

@@ -8,12 +8,19 @@ import FunctionState from "./components/FunctionState";
 import ClassStatePrac from "./components/ClassStatePrac";
 import FunctionStatePrac from "./components/FunctionStatePrac";
 import PororoObj from "./components/PororoObj";
+import PropsMap from "./components/PropsMap";
 
 // valid 함수 정의
 function valid() {
   console.log("콘솔 띄우기 성공!");
 }
 function App() {
+  const dataArr = [
+    { name: "peach", number: 5, price: 5000 },
+    { name: "apple", number: 1, price: 10000 },
+    { name: "banana", number: 3, price: 3000 },
+    { name: "grape", number: 2, price: 7000 },
+  ];
   return (
     <div className="App">
       {/* <h1>Hello, props</h1> */}
@@ -41,12 +48,14 @@ function App() {
       {/* <h1>Hello, state</h1>
       <ClassState></ClassState>
       <FunctionState></FunctionState> */}
-      <h1>Class state Practice</h1>
+      {/* <h1>Class state Practice</h1>
       <ClassStatePrac></ClassStatePrac>
       <h1>Function state Practice</h1>
       <FunctionStatePrac></FunctionStatePrac>
       <h1>Function Props, State Practice</h1>
-      <PororoObj></PororoObj>
+      <PororoObj></PororoObj> */}
+      <h1>map과 filter 사용</h1>
+      <PropsMap arr={dataArr} />
     </div>
   );
 }

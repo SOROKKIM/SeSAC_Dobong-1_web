@@ -2,13 +2,14 @@ import { ClassProps, ClassProps2 } from "./components/ClassProps";
 import { FunctionProps, FunctionProps2 } from "./components/FunctionProps";
 import { FunctionPropsPractice } from "./components/PracticeFuncProps2";
 import { FoodProps, TextProps } from "./components/PracticeProps1";
-import "./App.css";
+// import "./App.css";
 import ClassState from "./components/ClassState";
 import FunctionState from "./components/FunctionState";
 import ClassStatePrac from "./components/ClassStatePrac";
 import FunctionStatePrac from "./components/FunctionStatePrac";
 import PororoObj from "./components/PororoObj";
 import PropsMap from "./components/PropsMap";
+import Alphabet from "./components/Alphabet";
 
 // valid 함수 정의
 function valid() {
@@ -55,7 +56,8 @@ function App() {
       <h1>Function Props, State Practice</h1>
       <PororoObj></PororoObj> */}
       <h1>map과 filter 사용</h1>
-      <PropsMap arr={dataArr} />
+      {/* <PropsMap arr={dataArr} /> */}
+      <Alphabet />
     </div>
   );
 }

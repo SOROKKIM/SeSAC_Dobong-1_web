@@ -24,6 +24,12 @@ export default function Alphabet() {
       addAlpha();
     }
   };
+  // 삭제 작업
+  const deleteAlpha = (id) => {
+    // console.log(id); //id 확인
+    const newAlpha = list.filter((alpha) => alpha.id !== id);
+    setList(newAlpha);
+  };
   return (
     <div>
       <input
@@ -39,7 +45,14 @@ export default function Alphabet() {
       <button onClick={addAlpha}>add alphabet</button>
       <ol>
         {list.map((alphabet) => {
-          return <li key={alphabet.id}>{alphabet.alpha}</li>;
+          return (
+            <li
+              key={alphabet.id}
+              onDoubleClick={() => deleteAlpha(alphabet.id)}
+            >
+              {alphabet.alpha}
+            </li>
+          );
         })}
       </ol>
     </div>

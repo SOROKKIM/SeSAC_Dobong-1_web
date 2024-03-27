@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+}
+
+// header
+header {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  .menu-item {
+    margin: 0 8px;
+  }
+}
+
+// main page
+.MainPage {
+  background-color: pink;
+  min-height: 100vh;
+
+  &.dark {
+    background-color: gray;
+    color: white;
+  }
+}
+
+// productPage
+.ProductPage {
+  background-color: bisque;
+  min-height: 100vh;
+}
+
+.ProductItem {
+  text-decoration: none;
+  color: palevioletred;
+  &:hover {
+    color: purple;
+    font-weight: 700;
+  }
+  ul {
+    margin: 30px auto;
+    background-color: white;
+    width: 80vw;
+  }
+}

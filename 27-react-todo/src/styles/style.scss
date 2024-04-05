@@ -12,13 +12,15 @@ main {
       left: 0; /* 왼쪽 정렬 */
       width: 100%; /* 가로 전체 영역 설정 */
       height: 1px; /* 선의 높이 설정 */
-      border-top: 2px dashed burlywood; /* dashed 스타일 적용 */
+      border-top: 2px dashed orange; /* dashed 스타일 적용 */
     }
 
     .TodoList {
       border: 2px dashed green;
       color: pink;
       margin: 20px auto;
+      background-color: rgb(255, 224, 229);
+      text-decoration: none;
       input {
         margin-left: 10px;
       }
@@ -26,20 +28,51 @@ main {
         margin: auto 10px;
         background-color: bisque;
         border-radius: 10px;
-        border: none;
+        border: 2px solid burlywood;
+        box-shadow: 1px 1px 1px#aaaa;
         padding: 2px 7px;
         align-items: center;
         color: gray;
       }
-      li {
-        margin: 5px;
+      ul {
+        padding-left: 20px;
+        list-style-type: none;
+      }
+
+      ul li::before {
+        content: "- ";
+      }
+      ul li {
+        display: flex; /* Flexbox 사용 */
+        align-items: center; /* 수직 가운데 정렬 */
+        margin-bottom: 10px; /* 각 li 태그 사이의 간격을 조정 */
+      }
+      ul span {
+        margin-right: 10px; /* 내용과 버튼 사이의 간격을 조정 */
+      }
+      ul li span {
+        margin-left: 5px;
       }
     }
     .DoneList {
       border: 2px dashed pink;
       color: green;
-      li {
-        margin: 5px;
+      background-color: rgb(215, 237, 215);
+      ul {
+        padding-left: 20px;
+        list-style-type: none;
+      }
+
+      ul li::before {
+        content: " - ";
+      }
+      ul li {
+        display: flex; /* Flexbox 사용 */
+        align-items: center; /* 수직 가운데 정렬 */
+        margin-bottom: 10px; /* 각 li 태그 사이의 간격을 조정 */
+      }
+      ul li span {
+        margin-left: 5px;
       }
     }
   }

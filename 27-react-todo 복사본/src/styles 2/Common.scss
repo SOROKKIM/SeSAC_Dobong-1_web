@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+// header
+header {
+  text-decoration: none;
+  background-color: #f2f9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin-left: auto;
+  .menu-item {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #b0af7c;
+    &:hover {
+      color: skyblue;
+    }
+  }
+}
+
+// main page
+.MainPage {
+  background-color: pink;
+  min-height: 100vh;
+}
+
+.studentDetail {
+  text-decoration: none;
+  color: black;
+  background-color: greenyellow;
+  min-height: 20vh;
+}

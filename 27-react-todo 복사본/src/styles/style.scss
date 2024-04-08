@@ -1,0 +1,46 @@
+main {
+  .ListContainer {
+    h2 {
+      margin-left: 10px;
+      position: relative; /* 부모 요소로부터의 상대적 위치 설정 */
+    }
+    h2::after {
+      /* 가상 요소를 사용하여 구분선 추가 */
+      content: ""; /* 가상 요소에 내용 추가 */
+      position: absolute; /* 절대 위치 지정 */
+      bottom: -5px; /* 하단에서 5px만큼 위로 이동 */
+      left: 0; /* 왼쪽 정렬 */
+      width: 100%; /* 가로 전체 영역 설정 */
+      height: 1px; /* 선의 높이 설정 */
+      border-top: 2px dashed burlywood; /* dashed 스타일 적용 */
+    }
+
+    .TodoList {
+      border: 2px dashed green;
+      color: pink;
+      margin: 20px auto;
+      input {
+        margin-left: 10px;
+      }
+      button {
+        margin: auto 10px;
+        background-color: bisque;
+        border-radius: 10px;
+        border: none;
+        padding: 2px 7px;
+        align-items: center;
+        color: gray;
+      }
+      li {
+        margin: 5px;
+      }
+    }
+    .DoneList {
+      border: 2px dashed pink;
+      color: green;
+      li {
+        margin: 5px;
+      }
+    }
+  }
+}

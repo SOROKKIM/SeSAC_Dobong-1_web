@@ -7,7 +7,10 @@ export default function GenericList() {
   const [stringTodos, setStringTodos] = useState<GTodo<string>[]>([]);
 
   const addNumberTodo = () => {
-    setNumberTodos([...numberTodos, { id: Date.now(), text: 10, done: false }]);
+    setNumberTodos([
+      ...numberTodos,
+      { id: Date.now(), text: 10, done: false },
+    ]);
     console.log(numberTodos);
   };
   const addStringTodo = () => {

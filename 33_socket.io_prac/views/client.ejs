@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket 연습</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Hello world!</h1>
+    <button id="hello">hello</button>
+    <button id="study">study</button>
+    <button id="bye">bye</button>
+    <div id="texts"></div>
+    <script>
+      const socket = io();
+      const texts = document.getElementById("texts");
+
+      function sendMessage(text, message) {
+        const data = {
+          text: text,
+          message: message,
+        };
+
+        socket.emit("new_message", data);
+      }
+
+      socket.on("message_render", (message) => {
+        const p = document.createElement("p");
+        p.textContent = `${message.text} : ${message.message}`;
+        texts.append(p);
+      });
+
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          let text = button.textContent;
+          let message = "";
+
+          switch (text) {
+            case "hello":
+              message = "안녕하세요.";
+              break;
+            case "study":
+              message = "공부합시다!";
+              break;
+            case "bye":
+              message = "잘가~";
+              break;
+            default:
+              message = "알 수 없는 메시지";
+          }
+          texts.innerHTML = "";
+
+          const data = { text: text, message: message };
+          socket.emit("new_message", data);
+        });
+      });
+    </script>
+  </body>
+</html>

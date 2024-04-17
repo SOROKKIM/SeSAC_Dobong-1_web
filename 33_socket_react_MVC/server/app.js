@@ -5,7 +5,7 @@ const http = require("http");
 const PORT = 8080;
 const app = express();
 const server = http.createServer(app);
-const socketHandler = require("./sockets");
+const socketHandler = require("./sockets/index1.js");
 socketHandler(server);
 
 const cors = require("cors");
